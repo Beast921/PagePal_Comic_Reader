@@ -1,16 +1,10 @@
-# test_shit
+# PagePal
 
-A new Flutter project.
+## A Comic reader flutter app.
 
-## Getting Started
+A third-party client service based application which extracts comics from multiple sites and is provided to the user all at one place.
+Also has a multi-functional simplified viewer which is very easy to use and has different reading modes to incorporate different types of comics and its reading styles.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Tech Stack used
+Built using flutter. APIs built with python using selenium and beautifulsoup for scraping and flask as API framework.
+Database implemented using SQLite.
