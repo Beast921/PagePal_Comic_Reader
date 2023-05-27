@@ -4,10 +4,12 @@ import 'package:test_shit/chapter.dart';
 import 'package:test_shit/manga.dart';
 import 'package:test_shit/http_request.dart';
 import 'package:beautiful_soup_dart/beautiful_soup.dart';
-
 import 'tile.dart';
 
 class Bato {
+  static String srcUrl = 'http://192.168.100.12:5000';
+  // static String srcUrl = 'http://10.0.2.2:5000';
+
   static Manga? mangaDetails(String? html, String baseUrl){
     try{
       final soup = BeautifulSoup(html as String);
@@ -98,7 +100,7 @@ class Bato {
   }
 
   static Future<List<String>> fetchImages(String? chapUrl) async {
-    final url = 'http://10.0.2.2:5000/fetchImg?query=$chapUrl';
+    final url = '$srcUrl/fetchImg?query=$chapUrl';
     final res = await HttpService.get(url);
     final Map parsed = json.decode(res!);
     List<String> images = [];
@@ -110,7 +112,7 @@ class Bato {
   }
 
   static Future<List<Tile>> search(String? keyword) async {
-    final url = 'http://10.0.2.2:5000/search?query=$keyword';
+    final url = '$srcUrl/search?query=$keyword';
     final res = await HttpService.get(url);
     final parsed = json.decode(res!);
     List<Tile> results = [];
@@ -122,7 +124,7 @@ class Bato {
   }
 
   static Future<List<Tile>> getLatest() async {
-    const url = 'http://10.0.2.2:5000/latest';
+    final url = '$srcUrl/latest';
     final res = await HttpService.get(url);
     final parsed = json.decode(res!);
     List<Tile> results = [];

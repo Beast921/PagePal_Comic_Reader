@@ -49,7 +49,6 @@ def search():
         res = {}
         res['cover'] = item.find('a', class_='item-cover').find('img')['src']
         i = item.find('a', class_='item-title')
-        print(i)
         link = i['href']
         res['link'] = f"https://bato.to{link}"
         title = i.text
@@ -63,7 +62,6 @@ def search():
         res = {}
         res['cover'] = item.find('a', class_='item-cover').find('img')['src']
         i = item.find('a', class_='item-title')
-        print(i)
         link = i['href']
         res['link'] = f"https://bato.to{link}"
         title = i.text
@@ -89,7 +87,6 @@ def latest():
         res = {}
         res['cover'] = item.find('a', class_='item-cover').find('img')['src']
         i = item.find('a', class_='item-title')
-        print(i)
         link = i['href']
         res['link'] = f"https://bato.to{link}"
         title = i.text
@@ -101,4 +98,4 @@ def latest():
 
 
 if __name__ == "__main__":
-  app.run(debug=True)
+  app.run(host='0.0.0.0', port=5000, debug=True)
