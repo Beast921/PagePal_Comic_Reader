@@ -7,7 +7,7 @@ import 'package:beautiful_soup_dart/beautiful_soup.dart';
 import 'tile.dart';
 
 class Bato {
-  static String srcUrl = 'http://192.168.100.12:5000';
+  static String srcUrl = '15.207.84.148';
   // static String srcUrl = 'http://10.0.2.2:5000';
 
   static Manga? mangaDetails(String? html, String baseUrl){
